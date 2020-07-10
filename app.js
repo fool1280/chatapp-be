@@ -1,7 +1,6 @@
 var express = require("express");
 var logger = require("morgan");
 var cors = require("cors");
-var socketApi = require("./socketApi");
 const mongoose = require("mongoose");
 require("dotenv").config();
 
@@ -25,10 +24,5 @@ mongoose
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
-
-app.listen(process.env.PORT || 5000);
-
-var io = socketApi.io;
-io.attach(app);
 
 module.exports = app;
