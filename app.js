@@ -1,7 +1,7 @@
 var express = require("express");
 var logger = require("morgan");
 var cors = require("cors");
-var socketApi = require("../socketApi");
+var socketApi = require("./socketApi");
 const mongoose = require("mongoose");
 require("dotenv").config();
 
