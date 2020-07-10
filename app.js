@@ -26,7 +26,7 @@ mongoose
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 
-app.use(process.env.PORT || 5000);
+app.listen(process.env.PORT || 5000);
 
 var io = socketApi.io;
 io.attach(app);
